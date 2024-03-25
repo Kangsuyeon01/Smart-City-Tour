@@ -1,0 +1,3 @@
+
+rootProject.name = "SeoulLandmark"
+include ':app'

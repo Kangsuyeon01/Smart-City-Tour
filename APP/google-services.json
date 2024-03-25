@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "130331030804",
+    "project_id": "ai-landmark-app",
+    "storage_bucket": "ai-landmark-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130331030804:android:0542134c09518015fd7e01",
+        "android_client_info": {
+          "package_name": "com.aiproject.landmarkapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130331030804-klp9s0ilo7hg8odvf775r2f73im9ovna.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVqji4rLvw3YfxjcFyLAdFlFnNTWT0KHg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130331030804-klp9s0ilo7hg8odvf775r2f73im9ovna.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

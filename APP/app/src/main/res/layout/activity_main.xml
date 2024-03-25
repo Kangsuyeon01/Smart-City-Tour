@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/seoul_back"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="416dp"
+        android:layout_height="88dp"
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="#FFFFFF"
+        app:cardCornerRadius="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_maps"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="13dp" />
+
+            <TextView
+                android:id="@+id/txttitle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gmarket_sans_ttf_bold"
+                android:text="Just upload a picture!"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="28dp" />
+
+            <TextView
+                android:id="@+id/txttitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gmarket_sans_ttf_medium"
+                android:text="automatically recognize the landmark in the picture"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="22dp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/icon_logout"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@id/fabMain"
+        app:layout_constraintEnd_toEndOf="@id/fabMain"
+        app:layout_constraintStart_toStartOf="@id/fabMain"
+        app:layout_constraintTop_toTopOf="@id/fabMain" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:src="@drawable/smallup_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
+        app:backgroundTint="#FFFFFF"
+        android:layout_gravity="bottom|end"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_guide"
+        android:layout_width="304dp"
+        android:layout_height="44dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_background"
+        android:minWidth="300dp"
+        android:text="HOW TO USE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.851" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_gallery"
+        android:layout_width="144dp"
+        android:layout_height="129dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/button_background"
+        android:minWidth="300dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/btn_maps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintStart_toEndOf="@+id/btn_camera" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_camera"
+        android:layout_width="144dp"
+        android:layout_height="129dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_background"
+        android:minWidth="300dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/btn_maps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.876" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_maps"
+        android:layout_width="304dp"
+        android:layout_height="44dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/button_background"
+        android:minWidth="300dp"
+        android:text="LAMDMARKS NEAR BY ME"
+        app:layout_constraintBottom_toTopOf="@+id/btn_guide"
+        app:layout_constraintEnd_toEndOf="@+id/btn_guide"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_guide" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_camera"
+        app:layout_constraintEnd_toEndOf="@+id/btn_camera"
+        app:layout_constraintStart_toStartOf="@+id/btn_camera"
+        app:layout_constraintTop_toTopOf="@+id/btn_camera"
+        app:srcCompat="@drawable/camera_24" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_gallery"
+        app:layout_constraintEnd_toEndOf="@+id/btn_gallery"
+        app:layout_constraintStart_toStartOf="@+id/btn_gallery"
+        app:layout_constraintTop_toTopOf="@+id/btn_gallery"
+        app:srcCompat="@drawable/gallery_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
